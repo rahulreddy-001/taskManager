@@ -6,34 +6,34 @@ var timeAndDate = () => {
   const value_ = `${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}   ${date.getDate()}/${date.getMonth()}/${date.getFullYear()}`;
   return value_;
 };
-var sampleArr = [
-  {
-    taskName: "Task_001",
-    taskTime: timeAndDate(),
-  },
-  {
-    taskName: "Task_002",
-    taskTime: timeAndDate(),
-  },
-  {
-    taskName: "Task_003",
-    taskTime: timeAndDate(),
-  },
-  {
-    taskName: "Task_004",
-    taskTime: timeAndDate(),
-  },
-];
+// var sampleArr = [
+//   {
+//     taskName: "Task_001",
+//     taskTime: timeAndDate(),
+//   },
+//   {
+//     taskName: "Task_002",
+//     taskTime: timeAndDate(),
+//   },
+//   {
+//     taskName: "Task_003",
+//     taskTime: timeAndDate(),
+//   },
+//   {
+//     taskName: "Task_004",
+//     taskTime: timeAndDate(),
+//   },
+// ];
 
 function Output() {
   var taskName = "",
     taskDate = "",
     taskTime = "";
-  const [taskArr, setTaskArr] = useState(sampleArr);
+  const [taskArr, setTaskArr] = useState([]);
   var appendToArr = (taskObj) => {
     const newTask = {
       taskName: taskObj.taskName,
-      taskTime: `${taskObj.taskTime}   ${taskObj.taskDate}`,
+      taskTime: `${taskObj.taskTime} \n  ${taskObj.taskDate}`,
     };
     setTaskArr((arr) => [...arr, newTask]);
   };
