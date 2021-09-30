@@ -97,7 +97,7 @@ function Output() {
 
       <>
         {taskArr.map((taskObj1, index) => {
-          return <Events data={taskObj1} key="index" />;
+          return <Events data={taskObj1} key={`${index}_${taskName}}`} />;
         })}
       </>
     </div>
