@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-var timeAndDate = () => {
-  const date = new Date();
-  const value_ = `${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}   ${date.getDate()}/${date.getMonth()}/${date.getFullYear()}`;
-  return value_;
-};
+// var timeAndDate = () => {
+//   const date = new Date();
+//   const value_ = `${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}   ${date.getDate()}/${date.getMonth()}/${date.getFullYear()}`;
+//   return value_;
+// };
 // var sampleArr = [
 //   {
 //     taskName: "Task_001",
