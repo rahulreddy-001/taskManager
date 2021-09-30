@@ -1,0 +1,33 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+}
+.task {
+  border-style: solid;
+  border-color: rgb(0, 0, 0);
+  border-width: 0.01cm;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 0.1cm;
+  font-family: monospace;
+  align-items: center;
+  justify-content: center;
+}
+.tasks {
+  border-color: black;
+  border-style: groove;
+  border-width: 0.01cm;
+  border-radius: 0.2cm;
+  padding: 0.15cm;
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  margin: 0.5cm;
+  column-fill: balance;
+}
+.btn-close {
+  align-self: center;
+  justify-self: center;
+}
