@@ -41,7 +41,7 @@ function Output() {
     <div className="tasks">
       <div className="input-group flex-nowrap">
         <span className="input-group-text" id="addon-wrapping">
-          Task
+          TASK
         </span>
         <input
           type="text"
@@ -56,7 +56,7 @@ function Output() {
       </div>
       <div className="input-group flex-nowrap">
         <span className="input-group-text" id="addon-wrapping">
-          Date
+          DATE
         </span>
         <input
           className="form-control"
@@ -73,7 +73,7 @@ function Output() {
       </div>
       <div className="input-group flex-nowrap">
         <span className="input-group-text" id="addon-wrapping">
-          Time
+          TIME
         </span>
         <input
           className="form-control"
