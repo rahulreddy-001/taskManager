@@ -104,7 +104,7 @@ function Output() {
   );
 }
 function Events(props) {
-  var { taskName, taskTime, key } = props.data;
+  var { taskName, taskTime } = props.data;
   console.log();
   return (
     <div className="task">
