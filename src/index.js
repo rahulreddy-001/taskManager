@@ -1,30 +1,6 @@
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-// var timeAndDate = () => {
-//   const date = new Date();
-//   const value_ = `${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}   ${date.getDate()}/${date.getMonth()}/${date.getFullYear()}`;
-//   return value_;
-// };
-// var sampleArr = [
-//   {
-//     taskName: "Task_001",
-//     taskTime: timeAndDate(),
-//   },
-//   {
-//     taskName: "Task_002",
-//     taskTime: timeAndDate(),
-//   },
-//   {
-//     taskName: "Task_003",
-//     taskTime: timeAndDate(),
-//   },
-//   {
-//     taskName: "Task_004",
-//     taskTime: timeAndDate(),
-//   },
-// ];
-
 function Output() {
   var taskName = "",
     taskDate = "",
@@ -36,6 +12,15 @@ function Output() {
       taskTime: `${taskObj.taskTime} \n  ${taskObj.taskDate}`,
     };
     setTaskArr((arr) => [...arr, newTask]);
+  };
+  const filArray = (taskObj) => {
+    var newArr = taskArr.filter(
+      (element) =>
+        element.taskName !== taskObj.taskName &&
+        element.taskTime !== `${taskObj.taskTime} \n  ${taskObj.taskDate}`
+    );
+    setTaskArr(newArr);
+    console.log(newArr);
   };
   return (
     <div className="tasks">
@@ -97,7 +82,17 @@ function Output() {
 
       <>
         {taskArr.map((taskObj1, index) => {
-          return <Events data={taskObj1} key={`${index}_${taskName}}`} />;
+          return (
+            <>
+              <Events data={taskObj1} key={`${index}_${taskObj1.taskName}`} />
+              <button
+                type="button"
+                className="btn-close"
+                aria-label="Close"
+                onClick={() => filArray(taskObj1)}
+              ></button>
+            </>
+          );
         })}
       </>
     </div>
@@ -105,12 +100,10 @@ function Output() {
 }
 function Events(props) {
   var { taskName, taskTime } = props.data;
-  console.log();
   return (
     <div className="task">
       <div>{taskName}</div>
       <div>{taskTime}</div>
-      <button type="button" className="btn-close" aria-label="Close"></button>
     </div>
   );
 }
